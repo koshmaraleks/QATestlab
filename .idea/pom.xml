@@ -1,0 +1,6 @@
+<modelVersion>4.0.0</modelVersion>
+<groupId>com.saucelabs</groupId>
+<artifactId>sauce_appium_junit</artifactId>
+<version>0.0.1-SNAPSHOT</version>
+<name>sauce_appium_junit</name>
+<description>Sample Appium tests using JUnit</description>
