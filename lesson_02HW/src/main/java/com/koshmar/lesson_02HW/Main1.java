@@ -168,7 +168,7 @@ public class Main1 {
     }
 
     private static WebDriver initChromeDriver (){
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
         return new ChromeDriver();
     }
 
