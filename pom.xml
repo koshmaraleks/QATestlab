@@ -8,7 +8,9 @@
 <name>QATestlab</name>
 <description>Sample Appium tests using JUnit</description>
 <packaging>pom</packaging>
-<modules>
-    <module></module>
-</modules>
+    <modules>
+        <module>lesson_00</module>
+        <module>lesson_01</module>
+        <module>lesson_02HW</module>
+    </modules>
 </project>

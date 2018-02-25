@@ -5,7 +5,7 @@
 <groupId>com.koshmar</groupId>
 <artifactId>lesson_00</artifactId>
 <version>0.0.1-SNAPSHOT</version>
-<name>module_project</name>
+
 <description>Sample Appium tests using JUnit</description>
 <packaging>pom</packaging>
 <modules>
