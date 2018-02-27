@@ -27,4 +27,5 @@ public class ChromeSettings {
     public void tearDown (){
         driver.quit();
     }
+
 }
