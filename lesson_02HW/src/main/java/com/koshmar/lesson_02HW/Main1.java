@@ -14,6 +14,7 @@ public class Main1 {
         //Инициализация ChromeDriver
         WebDriver driver = initChromeDriver();
 
+
         //Настройка ChromeDriver
         driver.get("http://prestashop-automation.qatestlab.com.ua/admin147ajyvk0/");
         driver.manage().window().maximize();
@@ -163,12 +164,12 @@ public class Main1 {
 //        WebElement advancedParameters = driver.findElement(By.id("subtab-AdminAdvancedParameters"));
 //        advancedParameters.click();
 
-        driver.quit();
+//        driver.quit();
 
     }
 
     private static WebDriver initChromeDriver (){
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver");
         return new ChromeDriver();
     }
 
