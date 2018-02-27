@@ -1,5 +1,6 @@
 package com.koshmar.lesson_02HW;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,6 +10,8 @@ import java.util.concurrent.TimeUnit;
 public class SignIn {
     private ChromeSettings chromeSettings;
     private WebDriver driver;
+    private static final String USER_NAME = "webinar.test@gmail.com";
+    private static final String USER_PASSWORD = "Xcg7299bnSmMuRLp9ITw";
 
     public SignIn(ChromeSettings chromeSettings) {
         this.chromeSettings = chromeSettings;
@@ -26,21 +29,22 @@ public class SignIn {
 
     }
 
-    public void typeEmail(String email) {
-        WebElement fieldLogin = driver.findElement(USER_NAME);
+    public void typeEmail() {
+        WebElement fieldLogin = driver.findElement(By.id("email"));
         fieldLogin.click();
         fieldLogin.clear();
-        fieldLogin.sendKeys(email);
+        fieldLogin.sendKeys(USER_NAME);
     }
 
-    public void typePass(String password) {
-        WebElement fieldPass = driver.findElement();
+    public void typePass() {
+        WebElement fieldPass = driver.findElement(By.id("passwd"));
         fieldPass.click();
         fieldPass.clear();
-        fieldPass.sendKeys(password);
+        fieldPass.sendKeys(USER_PASSWORD);
     }
 
-//    WebElement button = driver.findElement(By.name("submitLogin"));
-//        button.click();
+    public void clickButton (String password) {
+        WebElement button = driver.findElement(By.name("submitLogin"));
+        button.click();
 
 }
