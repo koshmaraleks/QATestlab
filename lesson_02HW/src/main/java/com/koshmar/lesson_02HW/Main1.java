@@ -10,23 +10,26 @@ import java.util.concurrent.TimeUnit;
 
 public class Main1 {
     public static void main(String[] args) throws InterruptedException {
+        ChromeSettings chromeSettings = new ChromeSettings();
+        SignIn signIn = new SignIn(chromeSettings);
+        WebDriver driver = ChromeSettings.
 
-        //Инициализация ChromeDriver
-        WebDriver driver = initChromeDriver();
-
-
-        //Настройка ChromeDriver
-        driver.get("http://prestashop-automation.qatestlab.com.ua/admin147ajyvk0/");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-        //Авторизация на сайте
-        WebElement fieldLogin = driver.findElement(By.id("email"));
-        fieldLogin.sendKeys("webinar.test@gmail.com");
-        WebElement fieldPass = driver.findElement(By.id("passwd"));
-        fieldPass.sendKeys("Xcg7299bnSmMuRLp9ITw");
-        WebElement button = driver.findElement(By.name("submitLogin"));
-        button.click();
+//        //Инициализация ChromeDriver
+//        WebDriver driver = initChromeDriver();
+//
+//
+//        //Настройка ChromeDriver
+//        driver.get("http://prestashop-automation.qatestlab.com.ua/admin147ajyvk0/");
+//        driver.manage().window().maximize();
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//
+//        //Авторизация на сайте
+//        WebElement fieldLogin = driver.findElement(By.id("email"));
+//        fieldLogin.sendKeys("webinar.test@gmail.com");
+//        WebElement fieldPass = driver.findElement(By.id("passwd"));
+//        fieldPass.sendKeys("Xcg7299bnSmMuRLp9ITw");
+//        WebElement button = driver.findElement(By.name("submitLogin"));
+//        button.click();
 
         //Поиск и клик на элементе Dashboard
         WebElement dashBoard = driver.findElement(By.id("tab-AdminDashboard"));

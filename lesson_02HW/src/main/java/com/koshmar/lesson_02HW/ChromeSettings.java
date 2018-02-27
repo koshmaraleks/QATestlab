@@ -17,7 +17,9 @@ public class ChromeSettings {
         return new ChromeDriver();
     }
 
-
+    public WebDriver getDriver() {
+        return driver;
+    }
 
     public void tearDown (){
         driver.quit();

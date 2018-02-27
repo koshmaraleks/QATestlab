@@ -16,7 +16,7 @@ public class SignIn {
     public SignIn(ChromeSettings chromeSettings) {
         this.chromeSettings = chromeSettings;
     }
-    public ChromeDriver setUp (){
+    private ChromeDriver setUp (){
         ChromeDriver driver = new ChromeDriver();
         driver.get("http://prestashop-automation.qatestlab.com.ua/admin147ajyvk0/");
         driver.manage().window().maximize();
@@ -26,25 +26,28 @@ public class SignIn {
 
     public void login (){
         this.driver = this.chromeSettings.initChromeDriver();
-
+        this.setUp();
+        this.typeEmail();
+        this.typePass();
+        this.clickButton();
     }
 
-    public void typeEmail() {
+    private void typeEmail() {
         WebElement fieldLogin = driver.findElement(By.id("email"));
         fieldLogin.click();
         fieldLogin.clear();
         fieldLogin.sendKeys(USER_NAME);
     }
 
-    public void typePass() {
+    private void typePass() {
         WebElement fieldPass = driver.findElement(By.id("passwd"));
         fieldPass.click();
         fieldPass.clear();
         fieldPass.sendKeys(USER_PASSWORD);
     }
 
-    public void clickButton (String password) {
+    private void clickButton() {
         WebElement button = driver.findElement(By.name("submitLogin"));
         button.click();
-
+    }
 }
