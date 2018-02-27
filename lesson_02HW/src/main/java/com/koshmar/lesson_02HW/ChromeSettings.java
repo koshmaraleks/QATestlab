@@ -9,10 +9,10 @@ public class ChromeSettings {
     WebDriver driver = initChromeDriver();
 
 //    protected WebDriver driver;
-    protected String userEmail = "webinar.test@gmail.com";
-    protected String userPassword = "Xcg7299bnSmMuRLp9ITw";
+    private static final String USER_NAME = "webinar.test@gmail.com";
+    private static final String USER_PASSWORD = "Xcg7299bnSmMuRLp9ITw";
 
-    public static WebDriver initChromeDriver (){
+    public WebDriver initChromeDriver (){
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver");
         return new ChromeDriver();
     }
