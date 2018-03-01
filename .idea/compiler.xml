@@ -8,12 +8,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="lesson_01" />
         <module name="lesson_02HW" />
+        <module name="lesson_03" />
+        <module name="lesson_03HW" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="lesson_00" target="1.5" />
       <module name="lesson_01" target="1.5" />
       <module name="lesson_02HW" target="1.5" />
+      <module name="lesson_03" target="1.8" />
+      <module name="lesson_03HW" target="1.5" />
       <module name="QATestlab" target="1.5" />
     </bytecodeTargetLevel>
   </component>

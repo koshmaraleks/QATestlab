@@ -16,12 +16,12 @@ public class SignIn {
     public SignIn(ChromeSettings chromeSettings) {
         this.chromeSettings = chromeSettings;
     }
-    private ChromeDriver setUp (){
-        ChromeDriver driver = new ChromeDriver();
+    private void setUp (){
+//        ChromeDriver driver = new ChromeDriver();
         driver.get("http://prestashop-automation.qatestlab.com.ua/admin147ajyvk0/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        return driver;
+//        return driver;
     }
 
     public void login (){
@@ -49,5 +49,9 @@ public class SignIn {
     private void clickButton() {
         WebElement button = driver.findElement(By.name("submitLogin"));
         button.click();
+    }
+
+    public WebDriver getDriver() {
+        return driver;
     }
 }
