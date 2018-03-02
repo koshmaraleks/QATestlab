@@ -18,20 +18,20 @@ public abstract class BaseTest {
             case FIREFOX:
                 System.setProperty(
                         "webdriver.gecko.driver",
-                        new File(BaseTest.class.getResource("/geckodriver").getFile()).getPath());
+                        new File(BaseTest.class.getResource("/geckodriver.exe").getFile()).getPath());
                 return new FirefoxDriver();
 
             case INTERNET_EXPLORER:
                 System.setProperty(
                         "webdriver.ie.driver",
-                        new File(BaseTest.class.getResource("/IEDriverServer").getFile()).getPath());
+                        new File(BaseTest.class.getResource("/IEDriverServer.exe").getFile()).getPath());
                 return new InternetExplorerDriver();
 
             case CHROME:
             default:
                 System.setProperty(
                         "webdriver.chrome.driver",
-                        new File(BaseTest.class.getResource("/chromedriver").getFile()).getPath());
+                        new File(BaseTest.class.getResource("/chromedriver.exe").getFile()).getPath());
                 return new ChromeDriver();
         }
     }
