@@ -2,6 +2,7 @@ package com.koshmar.lesson_03HW;
 
 import com.koshmar.lesson_03HW.util.Browsers;
 import com.koshmar.lesson_03HW.util.Properties;
+import com.koshmar.lesson_03HW.util.WebDriverLogger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -44,7 +45,7 @@ public abstract class BaseTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         EventFiringWebDriver webDriver = new EventFiringWebDriver(driver);
-        webDriver.register(new EventHandler());
+        webDriver.register(new WebDriverLogger());
         return webDriver;
     }
 

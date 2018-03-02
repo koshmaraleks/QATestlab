@@ -17,5 +17,4 @@ public class SignOut {
     public void clickOnSignOutBtn () {
         driver.findElement(userLogout).click();
     }
-
 }
