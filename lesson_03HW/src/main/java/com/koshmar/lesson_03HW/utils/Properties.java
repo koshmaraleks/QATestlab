@@ -1,4 +1,4 @@
-package com.koshmar.lesson_03HW.util;
+package com.koshmar.lesson_03HW.utils;
 
 
 public class Properties {

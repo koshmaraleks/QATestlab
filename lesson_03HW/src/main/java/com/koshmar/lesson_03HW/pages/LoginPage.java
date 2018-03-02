@@ -1,8 +1,7 @@
 package com.koshmar.lesson_03HW.pages;
 
-import com.koshmar.lesson_03HW.util.Settings;
+import com.koshmar.lesson_03HW.utils.Settings;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 public class LoginPage {

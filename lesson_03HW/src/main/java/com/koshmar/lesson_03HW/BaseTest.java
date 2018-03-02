@@ -1,16 +1,13 @@
 package com.koshmar.lesson_03HW;
 
-import com.koshmar.lesson_03HW.util.Browsers;
-import com.koshmar.lesson_03HW.util.Properties;
-import com.koshmar.lesson_03HW.util.WebDriverLogger;
+import com.koshmar.lesson_03HW.utils.Browsers;
+import com.koshmar.lesson_03HW.utils.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
-import org.openqa.selenium.support.events.WebDriverEventListener;
 
-import java.beans.EventHandler;
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
@@ -45,7 +42,7 @@ public abstract class BaseTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         EventFiringWebDriver webDriver = new EventFiringWebDriver(driver);
-        webDriver.register(new WebDriverLogger());
+        webDriver.register(new EventHandler());
         return webDriver;
     }
 

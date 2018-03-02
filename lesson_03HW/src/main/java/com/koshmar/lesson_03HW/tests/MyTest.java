@@ -1,11 +1,11 @@
-package com.koshmar.lesson_03HW;
+package com.koshmar.lesson_03HW.tests;
 
+import com.koshmar.lesson_03HW.BaseTest;
 import com.koshmar.lesson_03HW.pages.AddCategoryPage;
 import com.koshmar.lesson_03HW.pages.CategoryPage;
 import com.koshmar.lesson_03HW.pages.DashboardPage;
 import com.koshmar.lesson_03HW.pages.LoginPage;
-import com.koshmar.lesson_03HW.util.Browsers;
-import org.openqa.selenium.WebDriver;
+import com.koshmar.lesson_03HW.utils.Browsers;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 public class MyTest extends BaseTest {

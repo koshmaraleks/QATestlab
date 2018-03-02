@@ -1,4 +1,4 @@
-package com.koshmar.lesson_03HW.util;
+package com.koshmar.lesson_03HW.utils;
 
 public enum Browsers {
     CHROME ("chrome"), FIREFOX ("firefox"), INTERNET_EXPLORER ("internet explorer");

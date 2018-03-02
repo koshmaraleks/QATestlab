@@ -1,15 +1,11 @@
-package com.koshmar.lesson_03HW.util;
+package com.koshmar.lesson_03HW;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
-public class WebDriverLogger implements WebDriverEventListener {
-//    private static final Logger LOG = LogManager.getLogger(EventHandler.class);
-
+public class EventHandler implements WebDriverEventListener {
 
     @Override
     public void beforeAlertAccept(WebDriver webDriver) {
@@ -74,21 +70,24 @@ public class WebDriverLogger implements WebDriverEventListener {
     @Override
     public void beforeFindBy(By by, WebElement webElement, WebDriver webDriver) {
 
-        System.out.println("test");
+        System.out.println("Search for element: " + by.toString());
     }
 
     @Override
     public void afterFindBy(By by, WebElement webElement, WebDriver webDriver) {
+        System.out.println("Element found successfuly");
 
     }
 
     @Override
     public void beforeClickOn(WebElement webElement, WebDriver webDriver) {
+        System.out.println("Click on element: " + webElement.getTagName() + " " + webElement.getAttribute("name"));
 
     }
 
     @Override
     public void afterClickOn(WebElement webElement, WebDriver webDriver) {
+        System.out.println("Element successfuly clicked");
 
     }
 
