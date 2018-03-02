@@ -52,6 +52,5 @@ public class MyTest extends BaseTest {
         myTest.runTestCategoryPage();
         myTest.runTestAddCategoryPage();
         myTest.runTestCategoryPage1();
-
     }
 }

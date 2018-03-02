@@ -15,7 +15,7 @@
     <bytecodeTargetLevel>
       <module name="lesson_00" target="1.5" />
       <module name="lesson_01" target="1.5" />
-      <module name="lesson_02HW" target="1.5" />
+      <module name="lesson_02HW" target="1.8" />
       <module name="lesson_03" target="1.8" />
       <module name="lesson_03HW" target="1.8" />
       <module name="QATestlab" target="1.5" />
