@@ -16,8 +16,8 @@ public class ScriptB extends ChromeSettings{
         signIn.clickSubmitButton();
 
         menuItemsTest.listOfElements();
-//        menuItemsTest.refreshPage();
-//        menuItemsTest.repeatListOfElements();
+        menuItemsTest.refreshPage();
+        menuItemsTest.repeatListOfElements();
 
         signOut.clickOnUserPictogram();
         signOut.clickOnSignOutBtn();

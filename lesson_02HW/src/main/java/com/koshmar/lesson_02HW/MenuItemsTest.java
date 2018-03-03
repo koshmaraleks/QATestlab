@@ -3,37 +3,33 @@ package com.koshmar.lesson_02HW;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import java.util.Iterator;
 import java.util.List;
 
 public class MenuItemsTest {
     private WebDriver driver;
+    private By mySelector = By.className("maintab");
 
     public MenuItemsTest(WebDriver driver) {
         this.driver = driver;
     }
-
     public void listOfElements() throws InterruptedException {
-        List<WebElement> allCategories = driver.findElements(By.className("maintab"));
-        Iterator<WebElement> itr = allCategories.iterator();
+        List<WebElement> allCategories = driver.findElements(mySelector);
         System.out.println("Список разделов главного меню:");
-        while(itr.hasNext()) {
-            System.out.println(itr.next().getText());
-
-//            Thread.sleep(3);
-
+        for (WebElement i : allCategories){
+            System.out.println(i.getText());
+            Thread.sleep(1);
         }
     }
-//    public void refreshPage (){
-//        driver.navigate().refresh();
-//    }
-//    public void repeatListOfElements(){
-//        List<WebElement> allCategories = driver.findElements(By.className("maintab"));
-//        Iterator<WebElement> itr = allCategories.iterator();
-//        System.out.println("Список разделов главного меню после перезагрузки:");
-//        while(itr.hasNext()) {
-//            System.out.println(itr.next().getText());
-//        }
-//    }
+    public void refreshPage (){
+        driver.navigate().refresh();
+    }
+    public void repeatListOfElements() throws InterruptedException{
+        List<WebElement> allCategories = driver.findElements(mySelector);
+        System.out.println("Обновленный список разделов главного меню:");
+        for (WebElement i : allCategories){
+            System.out.println(i.getText());
+            Thread.sleep(1);
+        }
+    }
 }
 
