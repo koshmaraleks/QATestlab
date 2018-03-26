@@ -16,12 +16,13 @@ public class ScriptB extends ChromeSettings{
         signIn.clickSubmitButton();
 
         menuItemsTest.listOfElements();
-        menuItemsTest.refreshPage();
-        menuItemsTest.repeatListOfElements();
+        Thread.sleep(9000);
+//        menuItemsTest.refreshPage();
+//        menuItemsTest.repeatListOfElements();
 
-        signOut.clickOnUserPictogram();
-        signOut.clickOnSignOutBtn();
+//        signOut.clickOnUserPictogram();
+//        signOut.clickOnSignOutBtn();
 
-        quitDriver(driver);
+//        quitDriver(driver);
     }
 }

@@ -13,9 +13,9 @@ public class ScriptA extends ChromeSettings{
         signIn.fillPasswordInput();
         signIn.clickSubmitButton();
 
-        signOut.clickOnUserPictogram();
-        signOut.clickOnSignOutBtn();
-
-        quitDriver(driver);
+//        signOut.clickOnUserPictogram();
+//        signOut.clickOnSignOutBtn();
+//
+//        quitDriver(driver);
     }
 }
